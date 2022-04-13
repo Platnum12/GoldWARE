@@ -16,7 +16,7 @@ local TextLabel = Instance.new("TextLabel")
 
 --Properties:
 
-ScreenGui.Parent = game.StarterGui
+ScreenGui.Parent = game.CoreGui
 
 Frame.Name = "Frame"
 Frame.Parent = ScreenGui
@@ -214,13 +214,7 @@ local function ROFD_fake_script() -- RadioSpam.Script
 	local script = Instance.new('Script', RadioSpam)
 
 	RadioSpam.MouseButton1Down:connect(function()
-		local args = {
-    [1] = "Message",
-    [2] = "County",
-    [3] = "Floppa6627 ONTOP  😈 😈 😈",
-}
-
-game:GetService("ReplicatedStorage").Events.RadioEvent:FireServer(unpack(args))
+		print("hello")
 	end)
 end
 coroutine.wrap(ROFD_fake_script)()
